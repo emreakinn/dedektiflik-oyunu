@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Clues from './Clues';
+import Modal from './modal';
 
 function Game() {
 
@@ -72,28 +73,11 @@ function Game() {
                     </div>
                 )))}
             </div>
-            {showModal && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50">
-                    <div className="bg-white p-6 rounded-lg w-90 text-center">
-                        <h2 className="text-xl font-bold mb-4">Emin misiniz?</h2>
-                        <p className="mb-6">Katili öğrenmek üzeresiniz.</p>
-                        <div className="flex justify-evenly">
-                            <button
-                                onClick={handleConfirm}
-                                className="bg-green-600 text-white px-4 py-2 rounded cursor-pointer"
-                            >
-                                Evet
-                            </button>
-                            <button
-                                onClick={handleCancel}
-                                className="bg-gray-400 text-white px-4 py-2 rounded cursor-pointer"
-                            >
-                                İptal
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            )}
+            <Modal
+                showModal={showModal}
+                handleConfirm={handleConfirm}
+                handleCancel={handleCancel}
+            />
         </div >
     )
 }
