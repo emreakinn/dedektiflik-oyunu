@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import Clues from './Clues';
-import Modal from './modal';
+import Clues from '../components/Clues';
+import Modal from '../components/modal';
 
 function Game() {
 
-    const { id } = useParams();
+    const { title } = useParams();
     const [game, setGame] = useState(null);
     const [showModal, setShowModal] = useState(false);
     const navigate = useNavigate();
@@ -15,10 +15,10 @@ function Game() {
         fetch('/data.json')
             .then(res => res.json())
             .then(data => {
-                const foundGame = data.senarios.find(s => s.id === parseInt(id));
+                const foundGame = data.senarios.find(s => s.title === title);
                 setGame(foundGame);
             });
-    }, [id]);
+    }, [title]);
 
     if (!game) return <div>Yükleniyor...</div>;
 
@@ -33,15 +33,22 @@ function Game() {
     };
 
     return (
-        <div className="p-6 text-center">
-            <h1 className="text-2xl font-bold">{game.title}</h1>
-            <p><b>Olay:</b> {game.description}</p>
-            <p><b>Ölüm Saati:</b> {game.timeOfDeath}</p>
-            <p><b>Ölüm Sebebi:</b> {game.causeOfDeath}</p>
-            <h1 className='text-5xl'>Şüpheliler</h1>
+        <div className="w-full h-[100vh] flex flex-col bg-gray-950 text-gray-300 text-center">
+            <div className="text-2xl font-bold py-10 mb-10">{game.title}</div>
+            <div className='w-full flex'>
+                <div className='w-[60%] p-10 flex flex-col gap-6 items-center justify-start'>
+                    <p><b>Olay:</b> {game.description}</p>
+                    <p><b>Ölüm Saati:</b> {game.timeOfDeath}</p>
+                    <p><b>Ölüm Sebebi:</b> {game.causeOfDeath}</p>
+                </div>
+                <div className='w-[40%] flex gap-10 items-center justify-center'>
+                    <button className='w-[40%] h-[600px] py-28 border-2'>ŞÜPHELİLER</button>
+                    <button className='w-[40%] h-[600px] py-28 border-2'>İPUÇLARI</button>
+                </div>
+            </div>
             <div className='flex flex-wrap gap-5 justify-between p-5'>
                 {game.characters.map((character => (
-                    <div className='w-[30%] p-3 bg-gray-200' key={character.id}>
+                    <div className='w-[0%] p-3 bg-gray-200' key={character.id}>
                         <img className='w-full h-[500px]' src={`/images/${character.image}`} alt={character.name} />
                         <p><b>Adı:</b> {character.name}</p>
                         <Link to={`/oyun/${game.id}/${character.id}`}>
