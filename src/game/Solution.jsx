@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 function Solution() {
 
-    const { title, katilId, characterName } = useParams();
+    const { title, katilId } = useParams();
     const [killer, setKiller] = useState(null);
     const [explanation, setExplanation] = useState("");
     const [game, setGame] = useState(null);
@@ -13,18 +13,19 @@ function Solution() {
             .then(res => res.json())
             .then(data => {
                 const foundGame = data.senarios.find(s => s.title === title);
-                const foundCharacter = foundGame?.characters.find(c => c.id === characterName);
+                const foundCharacter = foundGame?.characters.find(c => c.id === parseInt(katilId));
                 const foundExplanation = foundGame.solution.find(s => s.killerId === parseInt(katilId));
                 setGame(foundGame);
                 setKiller(foundCharacter);
                 setExplanation(foundExplanation?.explanation);
             });
-    }, [title, katilId, characterName]);
+    }, [title, katilId]);
 
     if (!killer || !game || !explanation) return <div>Yükleniyor...</div>;
 
     return (
-        <div className="p-6 text-center">
+        <div className="w-full h-[100vh] flex flex-col bg-gray-950 text-gray-300 text-center">
+            <div className="text-5xl font-bold py-10 mb-10">{game.title}</div>
             <h1 className="text-3xl font-bold text-red-700 mb-4">Katil Açığa Çıktı!</h1>
             <img src={`/images/${killer.image}`} alt={killer.name} className="mx-auto w-48 h-48 object-cover rounded-full" />
             <h2 className="text-2xl font-bold">{killer.name}</h2>

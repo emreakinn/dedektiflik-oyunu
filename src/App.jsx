@@ -6,9 +6,9 @@ function App() {
 
   return (
     <div className='w-full h-[100vh] bg-[url(./assets/background.png)] bg-no-repeat bg-cover bg-center'>
-      <div className='flex flex-col gap-10 p-80 text-6xl text-gray-300 font-bold'>
-        <div> DEDECTİVE GAME</div>
-        <div>
+      <div className='flex flex-col gap-10 pl-50 pt-70 text-gray-300 font-bold'>
+        <div className='text-7xl'> DEDECTİVE GAME</div>
+        <div className='text-5xl'>
           <Link to={`/game`}>
             <button className="text-gray-300 cursor-pointer">
               Oyun Başla

@@ -4,8 +4,8 @@ function modal({ showModal, handleCancel, handleConfirm }) {
     return (
         <div>
             {showModal && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50">
-                    <div className="bg-white p-6 rounded-lg w-90 text-center">
+                <div className="fixed inset-0 flex items-center justify-center bg-gray-950 bg-opacity-60 z-50">
+                    <div className="bg-gray-300 p-6 rounded-lg w-90 text-center text-gray-950">
                         <h2 className="text-xl font-bold mb-4">Emin misiniz?</h2>
                         <p className="mb-6">Katili öğrenmek üzeresiniz.</p>
                         <div className="flex justify-evenly">
@@ -17,7 +17,7 @@ function modal({ showModal, handleCancel, handleConfirm }) {
                             </button>
                             <button
                                 onClick={handleCancel}
-                                className="bg-gray-400 text-white px-4 py-2 rounded cursor-pointer"
+                                className="bg-red-600 text-white px-4 py-2 rounded cursor-pointer"
                             >
                                 İptal
                             </button>
