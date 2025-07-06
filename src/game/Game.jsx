@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import Clues from '../components/Clues';
 import Modal from '../components/modal';
 
 function Game() {
 
-    const { title } = useParams();
+    const { title, suspects } = useParams();
     const [game, setGame] = useState(null);
     const [showModal, setShowModal] = useState(false);
     const navigate = useNavigate();
@@ -18,19 +17,20 @@ function Game() {
                 const foundGame = data.senarios.find(s => s.title === title);
                 setGame(foundGame);
             });
-    }, [title]);
+    }, [title, suspects]);
 
     if (!game) return <div>Yükleniyor...</div>;
 
     const handleConfirm = () => {
         setShowModal(false);
         const killerId = game.solution[0].killerId;
-        navigate(`/oyun/${game.id}/cozum/${killerId}`);
+        navigate(`/game/${title}/katil/${killerId}`);
     };
 
     const handleCancel = () => {
         setShowModal(false);
     };
+
 
     return (
         <div className="w-full h-[100vh] flex flex-col bg-gray-950 text-gray-300 text-center">
@@ -42,43 +42,24 @@ function Game() {
                     <p><b>Ölüm Sebebi:</b> {game.causeOfDeath}</p>
                 </div>
                 <div className='w-[40%] flex gap-10 items-center justify-center'>
-                    <button className='w-[40%] h-[600px] py-28 border-2'>ŞÜPHELİLER</button>
-                    <button className='w-[40%] h-[600px] py-28 border-2'>İPUÇLARI</button>
+                    <Link className='w-[40%] h-[600px] py-28 border-2' to={`/game/${title}/suspects`}>
+                        <button>ŞÜPHELİLER</button>
+                    </Link>
+                    <Link className='w-[40%] h-[600px] py-28 border-2' to={`/game/${title}/clues`}>
+                        <button>İPUÇLARI</button>
+                    </Link>
                 </div>
             </div>
-            <div className='flex flex-wrap gap-5 justify-between p-5'>
-                {game.characters.map((character => (
-                    <div className='w-[0%] p-3 bg-gray-200' key={character.id}>
-                        <img className='w-full h-[500px]' src={`/images/${character.image}`} alt={character.name} />
-                        <p><b>Adı:</b> {character.name}</p>
-                        <Link to={`/oyun/${game.id}/${character.id}`}>
-                            <button className="bg-gray-600 text-white w-50 px-4 py-2 rounded cursor-pointer">
-                                İncele
-                            </button>
-                        </Link>
-                    </div>
-                )))}
-            </div>
-            <h1 className='text-5xl'>İpuçları</h1>
-            <Clues
-                game={game}
-            />
-            <h1 className="text-5xl">
-                Oyunu Bitir
-            </h1>
             <div>
-                {game.solution.map((killer => (
-                    <div className='p-3' key={killer.killerId}>
-                        <button
-                            onClick={() => {
-                                setShowModal(true);
-                            }}
-                            className="bg-gray-600 text-white px-6 py-2 rounded cursor-pointer"
-                        >
-                            Katili Öğren
-                        </button>
-                    </div>
-                )))}
+
+                <button
+                    onClick={() => {
+                        setShowModal(true);
+                    }}
+                    className="bg-gray-600 text-white px-6 py-2 rounded cursor-pointer"
+                >
+                    Katili Öğren
+                </button>
             </div>
             <Modal
                 showModal={showModal}

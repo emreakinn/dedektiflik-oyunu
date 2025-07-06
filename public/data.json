@@ -139,37 +139,228 @@
                     "id": "c1",
                     "title": "Zehirli Bardağın Analizi",
                     "type": "text",
-                    "content": "Bardağın içindeki sıvıda güçlü bir uyku ilacı tespit edildi."
+                    "content": "Bardağın içindeki sıvıda güçlü bir uyku ilacı tespit edildi.",
+                    "image": "/profil.jpg"
                 },
                 {
                     "id": "c2",
                     "title": "Görgü Tanığı İfadesi",
                     "type": "text",
-                    "content": "Kerem saat 22:15’te balkondan içeri girdi, ama kimseyle konuşmamıştı."
+                    "content": "Kerem saat 22:15’te balkondan içeri girdi, ama kimseyle konuşmamıştı.",
+                    "image": "/profil.jpg"
                 },
                 {
                     "id": "c3",
                     "title": "İlaç Buluntusu",
                     "type": "text",
-                    "content": "Nazlı’nın odasında aynı uyku ilacı bulundu."
+                    "content": "Nazlı’nın odasında aynı uyku ilacı bulundu.",
+                    "image": "/profil.jpg"
                 },
                 {
                     "id": "c4",
                     "title": "İçki Servisi",
                     "type": "text",
-                    "content": "İçki Cem tarafından hazırlandı ama bardağı Yusuf’a götüren Nazlı’ydı."
+                    "content": "İçki Cem tarafından hazırlandı ama bardağı Yusuf’a götüren Nazlı’ydı.",
+                    "image": "/profil.jpg"
                 },
                 {
                     "id": "c5",
                     "title": "Reçete Bilgisi",
                     "type": "text",
-                    "content": "Doktor Orhan, ilacı Yusuf’a yazmadığını doğruladı."
+                    "content": "Doktor Orhan, ilacı Yusuf’a yazmadığını doğruladı.",
+                    "image": "/profil.jpg"
                 },
                 {
                     "id": "c6",
                     "title": "Kamera Kaydı",
                     "type": "text",
-                    "content": "Aysel’in arabası malikâneye 23:00’te yakın bir kamerada görüntülendi."
+                    "content": "Aysel’in arabası malikâneye 23:00’te yakın bir kamerada görüntülendi.",
+                    "image": "/profil.jpg"
+                }
+            ],
+            "solution": [
+                {
+                    "killerId": 5,
+                    "explanation": "Nazlı, babasının kendisine olan ilgisizliğinden dolayı içkiyi uyku ilacıyla zehirledi. Odasında aynı ilaç bulundu. İçkiyi götüren de oydu."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Somtaşın Sessizliği",
+            "description": "Zengin iş insanı Yusuf Erdem, malikânesinde gece saatlerinde ölü bulundu. Olay yeri kısıtlı, şüpheliler belirli. Katil içeride...",
+            "timeOfDeath": "22:30",
+            "causeOfDeath": "Zehirli içecek",
+            "characters": [
+                {
+                    "id": 1,
+                    "name": "Emre Akın",
+                    "role": "Aile Avukatı",
+                    "statements": [
+                        {
+                            "question": "O gece nerede olduğunuzu anlatır mısınız?",
+                            "answer": "Saat 22:00 civarında evden ayrıldım. Telefon kayıtlarım bu zamanı doğruluyor. Ancak ayrılmadan önce Yusuf Bey’le miras konuları üzerine sert bir tartışma yaşadık. Kendisi bazen inatçı ve zor biriydi, özellikle de servetin paylaşımıyla ilgili. Evden çıktıktan sonra birkaç dakika yürüdüm, sonra arabamı park ettim. Bu arada, bahçede Kerem ile karşılaştım, bana sinirliydi ve biraz da endişeliydi. Sonra eve geri dönmedim çünkü Yusuf Bey’in benim gitmemi istediğini düşündüm."
+                        },
+                        {
+                            "question": "Yusuf Bey’le aranızdaki son konuşma neydi?",
+                            "answer": "Konuşmamız oldukça sert geçti. Miras sözleşmesinde bazı maddeler üzerinde anlaşamadık. Özellikle vasiyetin bazı bölümlerinin değiştirilmesini istedi. Ben ise hukuki açıdan bunun mümkün olmadığını belirttim. Bu yüzden aramızda gerginlik oluştu. Ama katil olduğumu düşünmüyorum. Miras işleri benim için sadece meslek, duygusal değilim."
+                        },
+                        {
+                            "question": "Başka kimlerle görüştünüz o akşam?",
+                            "answer": "Kerem ile bahçede kısa bir görüşmem oldu. Ayrıca Nazlı’nın evde olduğunu biliyorum ama onunla konuşmadım. Cem’i mutfakta gördüm, biraz huzursuzdu. Orhan doktor ise kütüphanedeydi, kitabına gömülmüştü. Herkesin davranışları şüpheliydi, ama ben kimseyi suçlamak istemem."
+                        }
+                    ],
+                    "notes": "Miras sözleşmeleri üzerinde çalışıyor, Yusuf Bey’le tartışmış.",
+                    "image": "/profil.jpg"
+                },
+                {
+                    "id": 2,
+                    "name": "Kerem Erdem",
+                    "role": "Oğlu",
+                    "statements": [
+                        {
+                            "question": "O gece ne yaptınız, nerede bulundunuz?",
+                            "answer": "Saat 22:15 civarında balkondaydım, telefonla iş görüşmesi yapıyordum. Telefon kayıtlarım bunu gösteriyor. Kimseyle konuşmadım. Ancak evin içinde bazı sesler duydum, tartışma sesleri gibi. Aysel Hanım’ın arabasının dışarıda olduğunu gördüm, o sırada bahçedeydim. İçeri girmeden önce biraz tereddüt ettim ama sonra odama çekildim."
+                        },
+                        {
+                            "question": "Babamızla ilişkiniz nasıldı?",
+                            "answer": "Zor ve karmaşıktı. Miras konularında anlaşamıyorduk. Babam beni küçümsüyordu, kararlarına karışmamı istemiyordu. Ama onu öldürmek istemezdim. Daha çok sevgisizliğin kurbanıyım."
+                        },
+                        {
+                            "question": "Olay sırasında başka kimler evdeydi?",
+                            "answer": "Cem mutfaktaydı, Nazlı ise odasına çekilmişti. Orhan doktor kütüphanede bir şeyler okuyordu. Aysel Hanım ise erken ayrılmıştı. Herkesin davranışları bana garip geliyordu, ama net bir suçlama yapamam."
+                        }
+                    ],
+                    "notes": "Miras konularında babasıyla sık tartışıyor.",
+                    "image": "/profil.jpg"
+                },
+                {
+                    "id": 3,
+                    "name": "Müge Arıkan",
+                    "role": "Hizmetçi",
+                    "statements": [
+                        {
+                            "question": "O gece ne yaptınız? Nerede bulundunuz?",
+                            "answer": "O gece mutfakta bulaşık yıkıyordum. Dışarıda ne olup bittiğini tam olarak bilmiyorum. İçeriye kimlerin girip çıktığını fark edemedim, çünkü işlerim yoğundu ve dikkatimi mutfaktan ayıramadım. Ancak bazen koridorlarda gölgeler gördüm, fakat tam kim olduğunu anlayamadım."
+                        },
+                        {
+                            "question": "Yusuf Bey ile aranız nasıldı?",
+                            "answer": "Saygılıydım ve görevimi en iyi şekilde yapmaya çalışıyordum. Ama bazı zamanlar aramızda gerginlikler yaşandı, özellikle Nazlı’nın babasıyla ilişkisi kötü olduğunda ben de sıkıntı yaşadım. Ancak kesinlikle onu incitmek istemezdim."
+                        },
+                        {
+                            "question": "Olay gecesi başka kimleri gördünüz?",
+                            "answer": "Cem mutfaktaydı, onunla birkaç kez göz göze geldik. Kerem ve Aysel Hanım’ı dışarıda gördüm. Nazlı odasındaydı. Orhan doktor da kütüphanedeydi. Bazen birinin gizlice koridordan geçmeye çalıştığını fark ettim ama kim olduğunu söylemek zor."
+                        }
+                    ],
+                    "notes": "Sadık görünse de hakkında söylentiler var.",
+                    "image": "/profil.jpg"
+                },
+                {
+                    "id": 4,
+                    "name": "Cem Şener",
+                    "role": "Ortak",
+                    "statements": [
+                        {
+                            "question": "Olay gecesi ne yaptınız?",
+                            "answer": "O gece mutfaktaydım, içkiyi hazırlıyordum. Yusuf Bey içkisini kendisi aldı ama bardağı ona götüren kişi Nazlı’ydı. Ben oradaydım ama ne içkiye ne de Yusuf Bey’e zarar verecek bir niyetim yoktu. İşlerim kötüye gidiyordu ve bu durum beni stres altına sokuyordu, ama cinayet? Hayır, yapmadım."
+                        },
+                        {
+                            "question": "Yusuf Bey ile aranız nasıldı?",
+                            "answer": "Ortaklığımız bozulmak üzereydi. Bazı finansal anlaşmazlıklarımız vardı. Bazen sert tartışmalarımız oluyordu. Ama iş ve kişisel meseleleri birbirinden ayırırım. Ona zarar verecek biri değilim."
+                        },
+                        {
+                            "question": "Başka kimlerle görüştünüz o gece?",
+                            "answer": "Müge ile göz göze geldik ama konuştuk sayılmaz. Nazlı odasındaydı. Aysel Hanım evden erken ayrılmıştı. Kerem balkondaydı, Orhan doktor da kütüphanedeydi. Herkesin davranışı bana şüpheli geldi, ama ben temizim."
+                        }
+                    ],
+                    "notes": "Ortaklıkları bozulmak üzere, maddi sıkıntılar var.",
+                    "image": "/profil.jpg"
+                },
+                {
+                    "id": 5,
+                    "name": "Nazlı Erdem",
+                    "role": "Kızı",
+                    "statements": [
+                        {
+                            "question": "O gece nerede bulundunuz?",
+                            "answer": "Baş ağrım vardı, odama çekildim. Kimseyle görüşmedim. Ancak babamın içkisini ben servis ettim. İçeride neler olduğunu tam olarak bilmiyorum ama o bardaktaki içeceği hazırlayan Cem’di. Ben sadece götürdüm. Babamla aramız çok kötüydü, onun ilgisizliği beni çok üzdü."
+                        },
+                        {
+                            "question": "Babanızla ilişkinizi nasıl tanımlarsınız?",
+                            "answer": "Çok zor. O beni hiç anlamadı. Sürekli işlerine odaklanıyordu. Ben de kendimi yalnız ve değersiz hissettim. Miras meselesi yüzünden de çok tartıştık. Ama onu öldürmek istemezdim. Bunu yapabilecek biri değilim."
+                        },
+                        {
+                            "question": "Olay gecesi başka kimlerle karşılaştınız?",
+                            "answer": "Cem mutfaktaydı, Aysel Hanım evden ayrılmıştı. Kerem balkondaydı. Orhan doktor ise sessizdi, kütüphanede zaman geçiriyordu. Bazıları davranışları şüpheliydi ama kimseyi suçlayamam."
+                        }
+                    ],
+                    "notes": "Babasıyla zor ilişkisi var, miras konularında gerilim.",
+                    "image": "/profil.jpg"
+                },
+                {
+                    "id": 6,
+                    "name": "Orhan Yalçın",
+                    "role": "Aile Doktoru",
+                    "statements": [
+                        {
+                            "question": "O gece nerede bulundunuz?",
+                            "answer": "Kütüphanede kitap okuyordum. Kimseyle konuşmadım ve etrafla pek ilgilenmedim. Sağlık durumu ile ilgili önemli kayıtları inceliyordum. Yusuf Bey’in sağlık geçmişine dair bazı önemli detayları gözden geçiriyordum, ama onun ölümüyle ilgili bir şey fark etmedim."
+                        },
+                        {
+                            "question": "Yusuf Bey’in sağlık durumu nasıldı?",
+                            "answer": "Son zamanlarda stresliydi ve uyku problemleri yaşıyordu. Ona uyku ilacı yazmadım ama evde bulunan ilaçlar hakkında tam bilgim yok. Olay gecesi ilaçların nasıl kullanıldığı konusunda bilgi sahibi değilim."
+                        },
+                        {
+                            "question": "Olay gecesi başka kimleri gördünüz?",
+                            "answer": "Aysel Hanım evden erken ayrılmıştı. Kerem balkondaydı. Nazlı kendi odasındaydı. Cem mutfaktaydı, Müge de görevini yapıyordu. Herkesin hareketlerini gözlemledim ama gizli bir şey fark etmedim."
+                        }
+                    ],
+                    "notes": "Yusuf’un sağlık geçmişine erişimi var, uyku ilacı yazmadı.",
+                    "image": "/profil.jpg"
+                }
+            ],
+            "clues": [
+                {
+                    "id": "c1",
+                    "title": "Zehirli Bardağın Analizi",
+                    "type": "text",
+                    "content": "Bardağın içindeki sıvıda güçlü bir uyku ilacı tespit edildi.",
+                    "image": "/profil.jpg"
+                },
+                {
+                    "id": "c2",
+                    "title": "Görgü Tanığı İfadesi",
+                    "type": "text",
+                    "content": "Kerem saat 22:15’te balkondan içeri girdi, ama kimseyle konuşmamıştı.",
+                    "image": "/profil.jpg"
+                },
+                {
+                    "id": "c3",
+                    "title": "İlaç Buluntusu",
+                    "type": "text",
+                    "content": "Nazlı’nın odasında aynı uyku ilacı bulundu.",
+                    "image": "/profil.jpg"
+                },
+                {
+                    "id": "c4",
+                    "title": "İçki Servisi",
+                    "type": "text",
+                    "content": "İçki Cem tarafından hazırlandı ama bardağı Yusuf’a götüren Nazlı’ydı.",
+                    "image": "/profil.jpg"
+                },
+                {
+                    "id": "c5",
+                    "title": "Reçete Bilgisi",
+                    "type": "text",
+                    "content": "Doktor Orhan, ilacı Yusuf’a yazmadığını doğruladı.",
+                    "image": "/profil.jpg"
+                },
+                {
+                    "id": "c6",
+                    "title": "Kamera Kaydı",
+                    "type": "text",
+                    "content": "Aysel’in arabası malikâneye 23:00’te yakın bir kamerada görüntülendi.",
+                    "image": "/profil.jpg"
                 }
             ],
             "solution": [

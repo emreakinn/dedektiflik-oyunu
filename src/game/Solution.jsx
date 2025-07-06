@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 function Solution() {
 
-    const { oyunId, katilId } = useParams();
+    const { title, katilId, characterName } = useParams();
     const [killer, setKiller] = useState(null);
     const [explanation, setExplanation] = useState("");
     const [game, setGame] = useState(null);
@@ -12,14 +12,14 @@ function Solution() {
         fetch('/data.json')
             .then(res => res.json())
             .then(data => {
-                const foundGame = data.senarios.find(s => s.id === parseInt(oyunId));
-                const foundCharacter = foundGame.characters.find(c => c.id === parseInt(katilId));
+                const foundGame = data.senarios.find(s => s.title === title);
+                const foundCharacter = foundGame?.characters.find(c => c.id === characterName);
                 const foundExplanation = foundGame.solution.find(s => s.killerId === parseInt(katilId));
                 setGame(foundGame);
                 setKiller(foundCharacter);
                 setExplanation(foundExplanation?.explanation);
             });
-    }, [oyunId, katilId]);
+    }, [title, katilId, characterName]);
 
     if (!killer || !game || !explanation) return <div>Yükleniyor...</div>;
 
