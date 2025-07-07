@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate, Link, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function Suspects() {
 
     const { title, character } = useParams();
     const [game, setGame] = useState(null);
-    const navigate = useNavigate();
 
     useEffect(() => {
         fetch('/data.json')
