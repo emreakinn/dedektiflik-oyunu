@@ -28,8 +28,8 @@ function Suspects() {
                             <img className='w-full h-[500px]' src={`/images/${character.image}`} alt={character.name} />
                             <p><b>Adı:</b> {character.name}</p>
                             <Link to={`/game/${title}/suspects/character/${character.name}`}>
-                                <button className="bg-gray-600 special uppercase text-white w-50 px-4 py-2 rounded cursor-pointer">
-                                    İncele
+                                <button className="bg-gray-600 special text-white w-50 px-4 py-2 rounded cursor-pointer">
+                                    İNCELE
                                 </button>
                             </Link>
                         </div>

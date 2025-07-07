@@ -11,7 +11,7 @@ function App() {
         <div className='text-5xl'>
           <Link to={`/game`}>
             <button className="text-gray-300 cursor-pointer">
-              Oyun Başla
+              OYUNA BAŞLA
             </button>
           </Link>
         </div>

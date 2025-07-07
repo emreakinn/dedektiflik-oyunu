@@ -27,8 +27,8 @@ function Main() {
                         </div>
                         <div className="text-center special">
                             <Link to={`${game.title}`}>
-                                <button className="bg-gray-950 uppercase text-gray-300 w-50 px-4 py-2 rounded cursor-pointer">
-                                    <b>Oyna</b>
+                                <button className="bg-gray-950 text-gray-300 w-50 px-4 py-2 rounded cursor-pointer">
+                                    <b>OYNA</b>
                                 </button>
                             </Link>
                         </div>

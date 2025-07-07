@@ -55,9 +55,9 @@ function Game() {
                     onClick={() => {
                         setShowModal(true);
                     }}
-                    className="bg-gray-600 text-white special uppercase px-6 py-2 rounded cursor-pointer"
+                    className="bg-gray-600 text-white special px-6 py-2 rounded cursor-pointer"
                 >
-                    Katili Öğren
+                    KATİLİ ÖĞREN
                 </button>
             </div>
             <Modal
