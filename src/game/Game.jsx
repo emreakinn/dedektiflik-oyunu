@@ -34,14 +34,14 @@ function Game() {
 
     return (
         <div className="w-full h-[100vh] flex flex-col bg-gray-950 text-gray-300 text-center">
-            <div className="text-2xl font-bold py-10 mb-10">{game.title}</div>
+            <div className="text-7xl special py-10 mb-10">{game.title}</div>
             <div className='w-full flex'>
-                <div className='w-[60%] p-10 flex flex-col gap-6 items-center justify-start'>
+                <div className='w-[60%] p-10 flex flex-col gap-6 items-center justify-start cormorant text-2xl'>
                     <p><b>Olay:</b> {game.description}</p>
                     <p><b>Ölüm Saati:</b> {game.timeOfDeath}</p>
                     <p><b>Ölüm Sebebi:</b> {game.causeOfDeath}</p>
                 </div>
-                <div className='w-[40%] flex gap-10 items-center justify-center'>
+                <div className='w-[40%] flex gap-10 items-center justify-center special text-3xl'>
                     <Link className='w-[40%] h-[600px] py-28 border-2' to={`/game/${title}/suspects`}>
                         <button>ŞÜPHELİLER</button>
                     </Link>
@@ -51,12 +51,11 @@ function Game() {
                 </div>
             </div>
             <div>
-
                 <button
                     onClick={() => {
                         setShowModal(true);
                     }}
-                    className="bg-gray-600 text-white px-6 py-2 rounded cursor-pointer"
+                    className="bg-gray-600 text-white special uppercase px-6 py-2 rounded cursor-pointer"
                 >
                     Katili Öğren
                 </button>

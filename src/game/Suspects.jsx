@@ -20,15 +20,15 @@ function Suspects() {
     return (
         <div>
             <div className='w-full h-[100vh] flex flex-col bg-gray-950 text-gray-300 text-center'>
-                <div className="text-5xl font-bold py-10 mb-10">{game.title}</div>
-                <div className='text-3xl'>Şüpheliler</div>
-                <div className="flex w-full flex-wrap justify-center">
+                <div className="text-7xl special py-5 mb-10">{game.title}</div>
+                <div className='text-3xl special py-3'>Şüpheliler</div>
+                <div className="flex w-full flex-wrap justify-center cormorant text-2xl">
                     {game.characters.map((character => (
                         <div className='w-[15%] p-3' key={character.id}>
                             <img className='w-full h-[500px]' src={`/images/${character.image}`} alt={character.name} />
                             <p><b>Adı:</b> {character.name}</p>
                             <Link to={`/game/${title}/suspects/character/${character.name}`}>
-                                <button className="bg-gray-600 text-white w-50 px-4 py-2 rounded cursor-pointer">
+                                <button className="bg-gray-600 special uppercase text-white w-50 px-4 py-2 rounded cursor-pointer">
                                     İncele
                                 </button>
                             </Link>

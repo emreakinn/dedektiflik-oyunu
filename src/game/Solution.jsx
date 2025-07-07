@@ -24,12 +24,12 @@ function Solution() {
     if (!killer || !game || !explanation) return <div>Yükleniyor...</div>;
 
     return (
-        <div className="w-full h-[100vh] flex flex-col bg-gray-950 text-gray-300 text-center">
-            <div className="text-5xl font-bold py-10 mb-10">{game.title}</div>
-            <h1 className="text-3xl font-bold text-red-700 mb-4">Katil Açığa Çıktı!</h1>
+        <div className="w-full h-[100vh] flex flex-col gap-3 bg-gray-950 text-gray-300 text-center">
+            <div className="text-5xl special py-10 mb-10">{game.title}</div>
+            <h1 className="text-3xl special text-red-700 mb-4">Katil Açığa Çıktı!</h1>
             <img src={`/images/${killer.image}`} alt={killer.name} className="mx-auto w-48 h-48 object-cover rounded-full" />
-            <h2 className="text-2xl font-bold">{killer.name}</h2>
-            <p className="text-lg max-w-xl mx-auto">{explanation}</p>
+            <h2 className="text-4xl font-bold special">{killer.name}</h2>
+            <p className="text-2xl max-w-xl mx-auto cormorant">{explanation}</p>
         </div>
     )
 }

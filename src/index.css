@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.special {
+    font-family: 'Special Elite', cursive;
+}
+
+.cormorant {
+    font-family: 'Cormorant Garamond', serif;
+}

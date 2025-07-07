@@ -4,7 +4,7 @@ function modal({ showModal, handleCancel, handleConfirm }) {
     return (
         <div>
             {showModal && (
-                <div className="fixed inset-0 flex items-center justify-center bg-gray-950 bg-opacity-60 z-50">
+                <div className="fixed inset-0 flex items-center justify-center bg-gray-950 bg-opacity-60 z-50 special">
                     <div className="bg-gray-300 p-6 rounded-lg w-90 text-center text-gray-950">
                         <h2 className="text-xl font-bold mb-4">Emin misiniz?</h2>
                         <p className="mb-6">Katili öğrenmek üzeresiniz.</p>
